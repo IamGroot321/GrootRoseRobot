@@ -74,9 +74,9 @@ async def szcbot(_, message: Message):
        affiliateplus = requests.get(f"https://api.safone.tech/chatbot?message={text}&user_id={user_id}&bot_name=BhanumathiBot&bot_master=Groot")
        textmsg = (affiliateplus.json()["message"])
        if "Affiliate+" in textmsg:
-        textmsg = textmsg.replace("Affiliate+", "Rose bot created by @szteambots")
+        textmsg = textmsg.replace("Affiliate+", "Bhanumathi bot created by @mynameisgroot")
        if "Lebyy_Dev" in textmsg:
-        textmsg = textmsg.replace("Lebyy_Dev", "Supun Maduranga Owner of @szteambots")
+        textmsg = textmsg.replace("Lebyy_Dev", "Bhanumathibot Owner of @Mynameisgroot")
        if "God Brando" in textmsg:
         textmsg = textmsg.replace("God Brando", f"{message.from_user.first_name}")
        if "seeker" in textmsg:
