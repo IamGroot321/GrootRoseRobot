@@ -19,40 +19,13 @@ keyboard = InlineKeyboardMarkup(
                 text="🇱🇷 English", callback_data="languages_en"
             ),
             InlineKeyboardButton(
-                text="🇱🇰 සිංහල", callback_data="languages_si"
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text="🇮🇳 हिन्दी", callback_data="languages_hi"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇹 Italiano", callback_data="languages_it"
-            )
+            ), 
         ],
         [
             InlineKeyboardButton(
                 text="🇮🇳 తెలుగు", callback_data="languages_ta"
             ),
-            InlineKeyboardButton(
-                text="🇮🇩 Indonesia", callback_data="languages_id"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇦🇪 عربي", callback_data="languages_ar"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇳 മലയാളം", callback_data="languages_ml"
-            ), 
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇲🇼 chichewa", callback_data="languages_ny"
-            ), 
-            InlineKeyboardButton(
-                text="🇩🇪 german", callback_data="languages_ge"
-            ), 
         ]]
 )
 
@@ -118,39 +91,12 @@ __helpbtns__ = (
                 text="🇱🇷 English", callback_data="languages_en"
             ),
             InlineKeyboardButton(
-                text="🇱🇰 සිංහල", callback_data="languages_si"
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text="🇮🇳 हिन्दी", callback_data="languages_hi"
             ),
-            InlineKeyboardButton(
-                text="🇮🇹 Italiano", callback_data="languages_it"
-            )
         ],
         [
             InlineKeyboardButton(
-                text="🇮🇳 తెలుగు", callback_data="languages_ta"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇩 Indonesia", callback_data="languages_id"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇦🇪 عربي", callback_data="languages_ar"
-            ),
-            InlineKeyboardButton(
-                text="🇮🇳 മലയാളം", callback_data="languages_ml"
-            ), 
-        ],
-        [
-            InlineKeyboardButton(
-                text="🇲🇼 chichewa", callback_data="languages_ny"
-            ), 
-            InlineKeyboardButton(
-                text="🇩🇪 german", callback_data="languages_ge"
+                text="🇮🇳 తెలుగు", callback_data="languages_te"
             ), 
         ], 
     ]
