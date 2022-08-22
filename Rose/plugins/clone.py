@@ -1,5 +1,4 @@
 from Rose import app
-from Rose.utils.commands import *
 import os
 import re
 import asyncio
@@ -9,8 +8,8 @@ from pyrogram.types import *
 from config import API_ID, API_HASH
 
 
-@app.on_message(command("clone"))
-async def clone(_, message):
+@app.on_message(filters.private & filters.command("clone"))
+async def clone(bot, msg: Message):
     chat = msg.chat
     text = await msg.reply("Usage:\n\n /clone token")
     cmd = msg.forward
