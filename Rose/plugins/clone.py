@@ -20,7 +20,7 @@ async def clone(bot, msg: Message):
         client = Client(":memory:", API_ID, API_HASH, bot_token=phone, plugins={"root": "plugins"})
         await client.start()
         user = await client.get_me()
-        await msg.reply(f"ʏᴏᴜʀ ᴄʟɪᴇɴᴛ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴀʀᴛᴇᴅ ᴀs @{user.username}! ✅ \n\n ɴᴏᴡ ᴀᴅᴅ ʏᴏᴜʀ ʙᴏᴛ ᴀɴᴅ ᴀssɪsᴛᴀɴᴛ @Mrnobiassitantant ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ!\n\nᴛʜᴀɴᴋs ғᴏʀ ᴄʟᴏɴɪɴɢ.")
+        await msg.reply(f"ʏᴏᴜʀ ᴄʟɪᴇɴᴛ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴀʀᴛᴇᴅ ᴀs @{user.username}! ✅\n\nᴛʜᴀɴᴋs ғᴏʀ ᴄʟᴏɴɪɴɢ.")
     except Exception as e:
         await msg.reply(f"**ᴇʀʀᴏʀ:** `{str(e)}`\nPress /start to Start again.")
 
