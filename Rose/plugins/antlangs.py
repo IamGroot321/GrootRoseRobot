@@ -273,7 +273,7 @@ async def check_anti_funcs(_, message: Message):
 
 
 
-__MODULE__ = f"{F_sub}"
+__MODULE__ = Forcesub
 __HELP__ = """
 
 **ForceSubscribe | Channel manager:**
