@@ -17,22 +17,27 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Telegram bot token get it from  @BotFather",
+            "value": "5706226216:AAHUvdgtC_Fm1gWZsOdiqLWJoIahFPoXUWo",
             "required": true
         },
         "API_ID": {
             "description": "API_ID of your Telegram Account my.telegram.org/apps",
+            "value": "8849698",
             "required": true
         },
         "API_HASH": {
             "description": "API_HASH of your Telegram Account my.telegram.org/apps",
+            "value": "0bfbdd4b2f0731285417330f5d1dd095",
             "required": true
         },
         "API_ID1": {
             "description": "Same as API_ID (multi-client)",
+            "value": "8849698",
             "required": true
         },
         "API_HASH1": {
             "description": "Same as API_HASH (multi-client)",
+            "value": "0bfbdd4b2f0731285417330f5d1dd095",
             "required": true
         },
         "LOG_GROUP_ID": {
@@ -42,10 +47,12 @@
         },
         "MONGO_URL": {
             "description": "Get From Here.https://www.mongodb.com/",
+            "value": "mongodb+srv://Amala203145:Amala2031456@cluster0.t9ibfge.mongodb.net/?retryWrites=true&w=majority",
             "required": true
         },
         "BASE_DB": {
             "description": "Get From Here.https://www.mongodb.com/ (Same as MONGO_URL but give differant value for this) ",
+            "value": "mongodb+srv://Amala203145:Amala2031456@cluster0.t9ibfge.mongodb.net/?retryWrites=true&w=majority",
             "required": true
         },
         "ARQ_API_URL": {
@@ -55,6 +62,7 @@
         },
         "ARQ_API_KEY": {
             "description": "Get this from @ARQRobot.",
+            "value": "AFQEGL-HMSWJM-IVCOLK-TZIMAR-ARQ",
             "required": true
         },
         "COMMAND_PREFIXES": {
