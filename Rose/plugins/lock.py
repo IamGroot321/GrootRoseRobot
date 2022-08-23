@@ -87,6 +87,7 @@ data = {
     "video": "vid",
     "audio": "aud",
     "document": "doc",
+    "command": "cmd", 
     "forward": "fwd",
     "photo": "pic",
     "sticker": "stc",
