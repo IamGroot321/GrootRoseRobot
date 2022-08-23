@@ -428,7 +428,7 @@ async def clear_allnote(_, m: Message):
 
 
 
-__MODULE__ = f"{Note}"
+__MODULE__ = Notes
 __HELP__ = """
 Save data for future users with notes!
 Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!
