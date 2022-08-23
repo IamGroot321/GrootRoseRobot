@@ -140,7 +140,7 @@ async def rm_alldisbl(client, message: Message, _):
 
 
 
-__MODULE__ = "Disabling"
+__MODULE__ = Disabling
 __HELP__ = """
 This allows you to disable some commonly used commands,
 so none can use them. It'll also allow you to autodelete them, 
