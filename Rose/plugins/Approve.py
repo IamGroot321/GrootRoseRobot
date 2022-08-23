@@ -154,7 +154,7 @@ async def unapproveall_users(_, m: Message):
     return
 
 
-__MODULE__ = f"{Approval}"
+__MODULE__ = Approval
 __HELP__ = """
 Sometimes, you might trust a user not to send unwanted content.
 Maybe not enough to make them admin, but you might be ok with locks, blocklists, and antiflood not applying to them.
