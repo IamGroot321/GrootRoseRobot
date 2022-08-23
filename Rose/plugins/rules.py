@@ -107,7 +107,7 @@ async def clear_rules(client, message: Message, _):
     return
 
 
-__MODULE__ = f"{Rule}"
+__MODULE__ = Rules
 __HELP__ = """
 Every chat works with different rules; this module will help make those rules clearer!
 
