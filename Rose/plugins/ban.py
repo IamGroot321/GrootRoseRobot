@@ -196,7 +196,7 @@ async def kickunc(client, message: Message, _):
     return
 
 
-__MODULE__ = f"{Restrict}"
+__MODULE__ = Restrict
 __HELP__ = """
 Some people need to be publicly banned; spammers, annoyances, or just trolls.
 
