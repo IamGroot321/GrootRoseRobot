@@ -302,7 +302,7 @@ async def bl_watcher(_, m: Message):
 
 
 
-__MODULE__ = f"{Blacklists}"
+__MODULE__ = Blacklists
 __HELP__ = """
 **User Commands:**
 - /blacklist: Check all the blacklists in chat.
