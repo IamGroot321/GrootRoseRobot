@@ -93,7 +93,7 @@ async def report_user(_, message):
 
 
 
-__MODULE__ = f"{Reports}"
+__MODULE__ = Reports
 __HELP__ = """
 We're all busy people who don't have time to monitor our groups 24/7. 
 But how do you react if someone in your group is spamming?
