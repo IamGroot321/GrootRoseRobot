@@ -406,7 +406,7 @@ async def goodbye(client, message: Message, _):
     await app.send_message(message.chat.id, text=tek, reply_markup=button)
     return
 
-__MODULE__ = f"{Greeting}"
+__MODULE__ = Greeting
 __HELP__ = """
 Give your members a warm welcome with the greetings module! Or a sad goodbye... Depends!
 
