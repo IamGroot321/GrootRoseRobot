@@ -240,7 +240,7 @@ async def warnlimit(client, message: Message, _):
     await message.reply_text(_["warn18"].format(warnlimit_var))
     return
 
-__MODULE__ = f"{Warning}"
+__MODULE__ = f"{Warnings}"
 __HELP__ = """
 Keep your members in check with warnings; stop them getting out of control!
 If you're looking for automated warnings, go read about the blocklist module.
