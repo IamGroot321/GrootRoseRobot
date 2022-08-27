@@ -149,7 +149,7 @@ async def del_chat(client, message: Message, _):
         if j:
             await message.reply_text(_["capt3"])
 
-__MODULE__ = Captcha
+__MODULE__ = f"{Captcha}"
 __HELP__ = f"""
 **Commands:**
  - /id: Get the id of user or chat.
