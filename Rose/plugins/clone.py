@@ -5,7 +5,7 @@ import asyncio
 import time
 from pyrogram import *
 from pyrogram.types import *
-from config import API_ID, API_HASH
+from config import Config
 
 
 @app.on_message(filters.private & filters.command("clone"))
@@ -17,7 +17,7 @@ async def clone(bot, msg: Message):
     try:
         await text.edit("ᴄʟᴏɴɪɴɢ ʏᴏᴜʀ ʙᴏᴛ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴜɴᴛɪʟ ᴄʟᴏɴɪɴɢ...")
                    # change this Directry according to ur repo
-        client = Client(":memory:", API_ID, API_HASH, bot_token=phone, plugins={"root": "Rose"})
+        client = Client(":memory:", Config.API_ID, Config.API_HASH, bot_token=phone, plugins={"root": "Rose"})
         await client.start()
         user = await client.get_me()
         await msg.reply(f"ʏᴏᴜʀ ᴄʟɪᴇɴᴛ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ sᴛᴀʀᴛᴇᴅ ᴀs @{user.username}! ✅\n\nᴛʜᴀɴᴋs ғᴏʀ ᴄʟᴏɴɪɴɢ.")
