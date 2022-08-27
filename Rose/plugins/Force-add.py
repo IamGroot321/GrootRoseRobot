@@ -1,59 +1,28 @@
-#Created By https://github.com/szsupunma
-#testing
-from Rose import app
-from Rose.plugins.nightmode import dbx
-from Rose.utils.custom_filters import *
-from Rose.utils.commands import *
-from Rose.utils.filter_groups import adder
+import asyncio
+from pyrogram import Client
+from pyrogram.errors import FloodWait, UserNotParticipant
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from config import Config
 
-fadd = dbx['Force-add']
-fuser = dbx['Force-user']
+CHANNEL_ID = Config.F_SUB_CHANNEL
 
-def info(id):
-    return fadd.find_one({"id": id})
 
-@app.on_message(command("setadder") & can_change_filter)
-async def customize_adder(_, message: Message):
-    rose = await message.reply("`Processing...`")
-    if message.chat.type == "private":
-        return await rose.edit("**You can set MemberBooster only in groups :(**")
-    if message.chat.type == "channel":
-        return
-    else:
-        if len(message.command) < 2:
-            return await rose.edit(f"Hey{message.from_user.mention} give some value to set as Forced add !")
-        value = message.text.split(None, 1)[1].replace(" ", "")
-        chats = fadd.find({})
-        if value == 0:
-         for c in chats:
-            if message.chat.id == c["id"] is True:
-                fadd.update_one(
-                    {"$set": {"valid":False}},
-                )
-            return    
-        for c in chats:
-            if message.chat.id == c["id"] and c["valid"] is True:
-                check = info(id=message.chat.id)
-                fadd.update_one(
-                    {
-                        "id": check["id"],
-                        "valid": check["valid"],
-                        "number": check["number"],
-                    },
-                    {"$set": {"number": value}},
-                )
-                await rose.edit(
-                    "**MemberBooster already set**\n__I am updating new value__"
-                )
-                await asyncio.sleep(2)
-                return await rose.edit(
-                    f"**MemberBooster Updated Successfully in {message.chat.title} chat**\nThe value of Forced add was set to `{value}`"
-                )
-        fadd.insert_one(
-            {
-                "id": message.chat.id,
-                "valid": True,
-                "number": value,
-            }
-        )
-        await rose.edit(f"**MemberBooster set Successfully in {message.chat.title} chat**\nThe value of Forced add was set to `{value}`")
+async def ForceSub(bot: Client, event: Message):
+    try:
+        await bot.get_chat_member(chat_id=(int(CHANNEL_ID) if CHANNEL_ID.startswith("-100") else CHANNEL_ID), user_id=event.from_user.id)
+    except UserNotParticipant:
+        try:
+           gh = await bot.send_message(chat_id=event.chat.id,text=f"""
+<b>Hey </b>{event.from_user.mention} !,
+<b>You are Free user so join my creators channel before useing me !Click join now button and join sz channel.</b>
+<i>Don't forget to give</i><code>/start</code><i>command again.</i>""",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now ↗️", url="https://t.me/szroseupdates")]]),disable_web_page_preview=True)
+           await asyncio.sleep(10)
+           await gh.delete()
+           return 400
+        except FloodWait as e:
+           await asyncio.sleep(e.x)
+           fix_ = await ForceSub(bot, event)
+           return fix_
+    except Exception as err:
+        print(f"Something Went Wrong! Unable to do Force Subscribe.\nError: {err}\n\nContact Support Group: https://t.me/supunma")
+        return 200  
