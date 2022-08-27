@@ -50,37 +50,21 @@ async def start_bot():
             j = 0
         else:
             all_module += "•≫ Successfully imported:{:<15}.py".format(i)
-        j += 1           
-    restart_data = await clean_restart_stage()
-    try:
-        if restart_data:
-            await app.edit_message_text(
-                restart_data["chat_id"],
-                restart_data["message_id"],
-                "**Restarted Successfully**",
-            )
-
-        else:
-            await app.send_message(LOG_GROUP_ID, "Bot started!")
-    except Exception:
-        pass
+        j += 1   
     print(f"{all_module}")
     print("""
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @Groot_Network     | 
-|          Greetings from Groot  :)           |
-|_____________________________________________|  
-                                                                                               
-    """)
+|         (C) 2021-2022 by @szteambots        | 
+|          Greetings from supun  :)           |
+|_____________________________________________| """)
     await idle()
-
     await aiohttpsession.close()
     await app.stop()
     for task in asyncio.all_tasks():
         task.cancel() 
-
+    print("Bot gone offline ):")
 
 
 home_keyboard_pm = InlineKeyboardMarkup(
@@ -400,8 +384,12 @@ async def help_button(client, query, _):
     return await client.answer_callback_query(query.id)
 
 if __name__ == "__main__":
+
     install()
+
     with closing(loop):
+
         with suppress(asyncio.exceptions.CancelledError):
             loop.run_until_complete(start_bot())
-        loop.run_until_complete(asyncio.sleep(3.0)) 
+
+        loop.run_until_complete(asyncio.sleep(1.0)) 
