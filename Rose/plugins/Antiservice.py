@@ -41,7 +41,7 @@ async def delete_service(_, message):
         pass
     
 
-__MODULE__ = f"{formating}"
+__MODULE__ = formating
 __HELP__ = f"""
 **Formatting**
 Bhanumathi supports a large number of formatting options to make
