@@ -346,7 +346,7 @@ async def reload_admins(_, message: Message):
 
 
 
-__MODULE__ = Admin
+__MODULE__ = f"{Admin}"
 __HELP__ = """
 Make it easy to promote and demote users with the admin module!
 
